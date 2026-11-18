@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jxx.cc最新-站点更新与资源索引观察</title>
+<meta name="description" content="jxx.cc最新动态与资源索引整理，梳理站点2026年11月的域名变更、频道更新、访问方式与常见问题，附版本对照和体验建议。">
+<meta name="keywords" content="jxx.cc最新">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b3c'/%3E%3Cpath d='M18 44V20h8v24zm20 0V20h8l-8 24zm-12-8l-6-8h6l6 8h-6z' fill='%234fd1c5'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f5f7f7;
+  --surface:#ffffff;
+  --ink:#16262e;
+  --ink-soft:#4a5d66;
+  --line:#d8e2e2;
+  --brand:#0f2b3c;
+  --brand-2:#0e5c66;
+  --accent:#12a89a;
+  --accent-soft:#e2f4f1;
+  --warn:#b4541f;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(15,43,60,.06),0 8px 24px rgba(15,43,60,.05);
+  --sp-1:6px;--sp-2:12px;--sp-3:18px;--sp-4:26px;--sp-5:38px;--sp-6:56px;
+  --font:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+h1,h2,h3,h4{line-height:1.35;margin:0;font-weight:700;letter-spacing:.01em}
+p{margin:0 0 var(--sp-2)}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.2em}
+li{margin:4px 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--sp-3)}
+
+/* 吸顶容器：公告条 + 页头 */
+.sticky-zone{position:sticky;top:0;z-index:60;box-shadow:0 1px 0 var(--line)}
+.notice-bar{
+  background:var(--brand);color:#d7ece9;font-size:13.5px;
+}
+.notice-bar .wrap{display:flex;gap:var(--sp-2);align-items:center;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+.notice-tag{background:var(--accent);color:#03211f;font-weight:700;border-radius:4px;padding:1px 7px;font-size:12px;letter-spacing:.04em}
+.notice-bar a{color:#eafffb;text-decoration:underline;text-underline-offset:3px}
+.site-header{background:var(--surface);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:var(--sp-3);padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{font-size:19px;font-weight:800;color:var(--brand);letter-spacing:.02em}
+.brand-sub{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:.14em}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.main-nav a{
+  font-size:14px;color:var(--ink-soft);padding:8px 10px;border-radius:var(--radius-sm);
+  transition:background .15s,color .15s;
+}
+.main-nav a:hover,.main-nav a.is-active{background:var(--accent-soft);color:var(--brand-2);text-decoration:none}
+.menu-toggle{display:none;margin-left:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:8px 12px;font-size:14px;font-weight:600;color:var(--brand);cursor:pointer;align-items:center;gap:6px}
+.search-form{display:flex;align-items:center;gap:6px;flex:none}
+.search-form input{
+  width:170px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius-sm);
+  font-family:inherit;font-size:14px;background:#fbfdfd;color:var(--ink);
+}
+.search-form button{
+  background:var(--brand-2);color:#fff;border:0;border-radius:var(--radius-sm);
+  padding:8px 13px;font-size:14px;font-family:inherit;cursor:pointer;
+}
+.search-form button:hover{background:var(--brand)}
+.search-feedback{font-size:13px;color:var(--warn);padding:0 0 8px;display:none}
+.search-feedback.show{display:block}
+.search-feedback .wrap{padding-top:0}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;color:#eaf6f4;
+  background:
+    radial-gradient(1000px 420px at 82% -10%,rgba(18,168,154,.45),transparent 62%),
+    radial-gradient(700px 380px at 6% 110%,rgba(30,110,140,.5),transparent 60%),
+    linear-gradient(150deg,#0b2230 0%,#10384a 58%,#0c4a52 100%);
+}
+.hero .wrap{padding-top:var(--sp-6);padding-bottom:var(--sp-6);display:grid;grid-template-columns:1.15fr .85fr;gap:var(--sp-5);align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.16em;color:#8fe0d6;border:1px solid rgba(143,224,214,.4);border-radius:99px;padding:4px 14px;margin-bottom:var(--sp-3)}
+.hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff;letter-spacing:.01em}
+.hero-lead{margin-top:var(--sp-3);font-size:16.5px;color:#c8e2df;max-width:34em;line-height:1.85}
+.hero-actions{margin-top:var(--sp-4);display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:99px;
+  font-size:15px;font-weight:600;text-decoration:none;transition:transform .15s,background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#04221f}
+.btn-primary:hover{background:#2fc3b4}
+.btn-ghost{border:1px solid rgba(200,226,223,.45);color:#dff2ef}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.hero-stats{margin-top:var(--sp-5);display:flex;gap:var(--sp-4);flex-wrap:wrap;font-size:13px;color:#9dc9c4}
+.hero-stats strong{display:block;font-size:22px;color:#fff;font-weight:700;line-height:1.3}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art figcaption{font-size:12.5px;color:#9dc9c4;margin-top:8px;letter-spacing:.02em}
+
+/* 主体骨架 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-4);
+  align-items:start;padding-top:var(--sp-5);padding-bottom:var(--sp-6);
+}
+section[role="region"],.block{scroll-margin-top:calc(var(--sticky-h) + 18px)}
+.sidebar{position:sticky;top:calc(var(--sticky-h) + 16px);display:flex;flex-direction:column;gap:var(--sp-3)}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:var(--sp-3) var(--sp-3);box-shadow:var(--shadow);
+}
+.panel-title{font-size:14.5px;color:var(--brand);padding-bottom:8px;margin-bottom:10px;border-bottom:1px dashed var(--line)}
+.side-nav a{display:block;font-size:14px;color:var(--ink-soft);padding:6px 10px;border-left:3px solid transparent;border-radius:0 6px 6px 0}
+.side-nav a:hover{background:var(--accent-soft);color:var(--brand-2);text-decoration:none}
+.side-nav a.is-active{border-left-color:var(--accent);background:var(--accent-soft);color:var(--brand);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px;color:var(--ink-soft)}
+.side-list li{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px dotted #e6eeee}
+.side-list li:last-child{border-bottom:0}
+.side-list b{color:var(--brand);font-variant-numeric:tabular-nums}
+.side-note{font-size:13px;color:var(--ink-soft);line-height:1.7}
+
+/* 版面通用标题 */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-2);margin-bottom:var(--sp-3);flex-wrap:wrap}
+.sec-title{font-size:clamp(20px,2.4vw,25px);color:var(--brand)}
+.sec-title span{display:block;font-size:12.5px;font-weight:500;letter-spacing:.18em;color:var(--accent);margin-bottom:4px}
+.sec-desc{font-size:14px;color:var(--ink-soft);max-width:46em;margin-bottom:var(--sp-3)}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-size:13.5px;padding:6px 13px;border:1px solid var(--line);border-radius:99px;
+  background:var(--surface);color:var(--brand-2);
+}
+.chip:hover{background:var(--accent-soft);border-color:var(--accent);text-decoration:none}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:var(--accent-soft);color:var(--brand-2);font-weight:600}
+
+/* 概览板块：非对称组合 */
+.overview{display:grid;grid-template-columns:1.4fr 1fr;gap:var(--sp-3)}
+.overview-main{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-4);box-shadow:var(--shadow)}
+.overview-main h3{font-size:18px;color:var(--brand);margin-bottom:8px}
+.overview-side{display:flex;flex-direction:column;gap:var(--sp-2)}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+.legend div{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:9px 11px}
+.legend b{display:block;font-size:15px;color:var(--brand);font-variant-numeric:tabular-nums}
+.legend small{color:var(--ink-soft);font-size:12px}
+.status-row{list-style:none;padding:0;margin:0;font-size:13.5px}
+.status-row li{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px dotted #e6eeee}
+.status-row li:last-child{border-bottom:0}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-1px)}
+.dot.warn{background:#e0a028}
+.dot.off{background:#a9b7bb}
+
+/* 精选网格卡片 */
+.grid-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.gcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(15,43,60,.1)}
+.gcard img{width:100%;height:150px;object-fit:cover}
+.gcard-body{padding:var(--sp-2) var(--sp-3) var(--sp-3);display:flex;flex-direction:column;gap:6px;flex:1}
+.gcard h3{font-size:16.5px;color:var(--brand)}
+.gcard p{font-size:13.8px;color:var(--ink-soft);margin:0}
+.gcard .meta{font-size:12.5px;color:#7d9197;margin-top:auto;display:flex;justify-content:space-between;gap:8px;padding-top:6px;border-top:1px dotted #e6eeee}
+
+/* 紧凑列表 */
+.list-news{list-style:none;padding:0;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.list-news li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:var(--sp-2);padding:13px var(--sp-3);border-bottom:1px solid #edf2f2}
+.list-news li:last-child{border-bottom:0}
+.list-news time{font-size:12.5px;color:#7d9197;font-variant-numeric:tabular-nums;padding-top:2px}
+.list-news strong{font-size:15px;color:var(--brand);display:block}
+.list-news .sum{font-size:13.5px;color:var(--ink-soft)}
+
+/* 分类索引：标签索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-2)}
+.cat-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 13px;display:flex;flex-direction:column;gap:2px;transition:border-color .15s,background .15s}
+.cat-item:hover{border-color:var(--accent);background:#f7fdfc;text-decoration:none}
+.cat-item b{font-size:14.5px;color:var(--brand)}
+.cat-item small{font-size:12.5px;color:#7d9197}
+
+/* 深度解析 */
+.article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-4);box-shadow:var(--shadow)}
+.article h2{font-size:clamp(21px,2.6vw,26px);color:var(--brand);margin-bottom:6px}
+.article .byline{font-size:13px;color:#7d9197;margin-bottom:var(--sp-3);padding-bottom:var(--sp-2);border-bottom:1px solid #edf2f2}
+.article h3{font-size:17.5px;color:var(--brand-2);margin:var(--sp-4) 0 8px}
+.article h3:first-of-type{margin-top:var(--sp-2)}
+.article p{font-size:15.4px;color:#2b3d45}
+.article blockquote{
+  margin:var(--sp-3) 0;padding:var(--sp-2) var(--sp-3);border-left:4px solid var(--accent);
+  background:#f2fbfa;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:15px;color:#20474c;
+}
+.article blockquote p:last-child{margin-bottom:0}
+.datatable{width:100%;border-collapse:collapse;font-size:14px;margin:var(--sp-2) 0 var(--sp-3)}
+.datatable caption{text-align:left;font-size:13px;color:#7d9197;padding-bottom:6px}
+.datatable th,.datatable td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.datatable th{background:#f2f8f8;color:var(--brand);font-weight:600}
+.datatable td{color:#2b3d45}
+.checklist{list-style:none;padding:0;margin:var(--sp-2) 0 var(--sp-3);font-size:14.6px}
+.checklist li{padding:6px 0 6px 28px;position:relative;border-bottom:1px dotted #e6eeee}
+.checklist li:last-child{border-bottom:0}
+.checklist li::before{content:"";position:absolute;left:4px;top:13px;width:11px;height:11px;border:2px solid var(--accent);border-radius:3px}
+.verdict{background:#fffdf3;border:1px solid #ecdfae;border-radius:var(--radius-sm);padding:var(--sp-2) var(--sp-3);font-size:14.5px;color:#5a4a17;margin:var(--sp-3) 0}
+.verdict b{color:#6a4f00}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step;display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2)}
+.steps li{
+  counter-increment:step;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:var(--sp-2) var(--sp-3) var(--sp-3);position:relative;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);display:inline-block;font-size:12px;font-weight:700;
+  color:var(--brand-2);background:var(--accent-soft);border-radius:4px;padding:1px 7px;margin-bottom:6px;
+}
+.steps b{display:block;font-size:15.5px;color:var(--brand);margin-bottom:2px}
+.steps p{font-size:13.8px;color:var(--ink-soft);margin:0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.compare > div{padding:var(--sp-3)}
+.compare > div + div{border-left:1px solid var(--line)}
+.compare h3{font-size:15.5px;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.compare ul{margin:0;padding-left:1.1em;font-size:13.9px;color:var(--ink-soft)}
+.compare .panel-ok{background:#f6fdfb}
+.compare .panel-caution{background:#fffdf6}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:8px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:0 var(--sp-3)}
+.faq details[open]{border-color:var(--accent);background:#fbfefd}
+.faq summary{cursor:pointer;font-size:15.5px;font-weight:600;color:var(--brand);padding:13px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:19px;color:var(--accent);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 0 14px;font-size:14.5px;color:#2b3d45}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2)}
+.comment{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:var(--sp-2) var(--sp-3)}
+.comment header{display:flex;align-items:center;gap:8px;font-size:13px;color:#7d9197;margin-bottom:6px}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--brand-2);color:#fff;font-size:12px;display:grid;place-items:center;font-weight:700;flex:none}
+.comment p{font-size:14.3px;color:#2b3d45;margin:0}
+.comment .ref{font-size:12.5px;color:var(--brand-2);background:var(--accent-soft);border-radius:4px;padding:1px 6px;display:inline-block;margin-top:7px}
+
+/* 资讯 */
+.news-two{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.news-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-3);display:flex;flex-direction:column;gap:6px}
+.news-card time{font-size:12.5px;color:#7d9197}
+.news-card h3{font-size:16px;color:var(--brand)}
+.news-card p{font-size:13.9px;color:var(--ink-soft);margin:0}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);margin-left:8px}
+.timeline li{position:relative;padding:0 0 var(--sp-3) var(--sp-3)}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.timeline time{font-size:12.5px;color:var(--brand-2);font-weight:600;display:block}
+.timeline b{font-size:15px;color:var(--brand);display:block;margin:1px 0}
+.timeline p{font-size:13.9px;color:var(--ink-soft);margin:0}
+
+/* 推荐标签 & 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.rank-list li{counter-increment:rk;display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dotted #e6eeee;font-size:14.2px}
+.rank-list li::before{content:counter(rk);font-weight:800;color:var(--accent);font-size:13px;min-width:16px}
+.rank-list a{color:var(--brand)}
+.rank-list small{color:#7d9197;font-size:12.5px;margin-left:auto;white-space:nowrap}
+
+/* 页脚 */
+.site-footer{background:var(--brand);color:#bcd6d3;padding-top:var(--sp-5);margin-top:var(--sp-4)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--sp-4);padding-bottom:var(--sp-4)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-brand .brand-text{color:#fff}
+.site-footer h4{font-size:13.5px;color:#fff;letter-spacing:.06em;margin-bottom:10px}
+.site-footer ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+.site-footer li{padding:4px 0}
+.site-footer a{color:#bcd6d3}
+.site-footer a:hover{color:#fff}
+.footer-note{font-size:12.8px;color:#93b3ae;line-height:1.8}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:var(--sp-3) 0 var(--sp-4);font-size:12.8px;color:#8fadaa;display:flex;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:70;width:44px;height:44px;border-radius:50%;
+  border:1px solid #cfe0dd;background:#fff;color:var(--brand);font-size:19px;cursor:pointer;
+  box-shadow:0 6px 18px rgba(15,43,60,.16);display:none;place-items:center;
+}
+.to-top.show{display:grid}
+@media (max-width:480px){.to-top{right:12px;bottom:14px;width:40px;height:40px}}
+
+/* 响应式 */
+@media (max-width:1020px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidebar{position:static;order:2;margin-top:var(--sp-3)}
+  .grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero .wrap{grid-template-columns:1fr;gap:var(--sp-4)}
+  .hero-art{max-width:520px}
+}
+@media (max-width:820px){
+  .search-form input{width:130px}
+  .overview{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .news-two{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare > div + div{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:760px){
+  :root{--sticky-h:104px}
+  .menu-toggle{display:flex}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--surface);border-bottom:1px solid var(--line);
+    padding:8px var(--sp-3) 14px;flex-direction:column;align-items:stretch;gap:2px;
+    box-shadow:0 12px 22px rgba(15,43,60,.12);margin-left:0;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 12px;font-size:15px}
+  .site-header .wrap{flex-wrap:wrap;position:relative}
+  .search-form{margin-left:0;flex:1 1 100%;order:3}
+  .search-form input{flex:1;width:auto}
+  .grid-cards{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .rank-list{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero .wrap{padding-top:var(--sp-4);padding-bottom:var(--sp-4)}
+  .hero-stats{gap:var(--sp-3)}
+  .article{padding:var(--sp-3)}
+  .list-news li{grid-template-columns:1fr;gap:2px}
+}
+@media (max-width:360px){
+  .brand-text{font-size:17px}
+  .cat-grid{grid-template-columns:1fr}
+  .hero-stats strong{font-size:19px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-zone">
+  <div class="notice-bar" role="region" aria-label="站点公告">
+    <div class="wrap">
+      <span class="notice-tag">更新</span>
+      <span><strong>jxx.cc最新</strong> 域名解析于 2026-11-06 完成切换，旧入口 jxx.cc 的 https 证书同步续期至 2027-02-04。</span>
+      <a href="/#latest">查看变更记录</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="返回首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="站点标志：折线索引图形">
+          <rect width="64" height="64" rx="14" fill="#0f2b3c"/>
+          <path d="M17 46V18h8v28z" fill="#4fd1c5"/>
+          <path d="M29 46V18h7.5L48 46V18h-6.5v16L31 18h-2z" fill="#8fe0d6" opacity=".9"/>
+          <path d="M14 52h36" stroke="#12a89a" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">jxx.cc最新<span class="brand-sub">资源索引观察</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" id="menuToggle">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="#0f2b3c" stroke-width="1.8" stroke-linecap="round"/></svg>
+        导航
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+
+      <form class="search-form" id="searchForm" role="search" aria-label="站内查找">
+        <input type="search" id="searchInput" name="q" placeholder="查找镜像域名、频道…" aria-label="输入关键词">
+        <button type="submit">查找</button>
+      </form>
+    </div>
+    <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite">
+      <div class="wrap" id="searchFeedbackText"></div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="pageTitle">
+    <div class="wrap">
+      <div>
+        <span class="hero-eyebrow">镜像与索引 · 2026 年 11 月观察</span>
+        <h1 id="pageTitle">jxx.cc最新</h1>
+        <p class="hero-lead">
+          围绕 jxx.cc 的域名解析、镜像切换与频道索引，记录 10 月 10 日至 11 月 8 日之间 6 次入口调整。
+          每个条目附时间、可核对的状态码与来源截图编号，方便收藏后自行比对，而不是只记住一个地址。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#latest">看 11 月变更记录</a>
+          <a class="btn btn-ghost" href="/#guide">按步骤检查入口</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong>次入口调整</div>
+          <div><strong>12</strong>个可检索频道</div>
+          <div><strong>4</strong>种镜像校验方式</div>
+          <div><strong>11-06</strong>最近一次切换</div>
+        </div>
+      </div>
+
+      <figure class="hero-art" aria-labelledby="artCap">
+        <svg viewBox="0 0 460 340" role="img" aria-label="原创构图：域名解析路径与镜像节点示意">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#12a89a" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#4fd1c5" stop-opacity=".25"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="12" width="440" height="316" rx="18" fill="none" stroke="#2a5a66" stroke-width="1.5"/>
+          <path d="M60 96h96l28 28h84l30-30h96" fill="none" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="60" cy="96" r="7" fill="#8fe0d6"/>
+          <circle cx="156" cy="96" r="5" fill="#4fd1c5"/>
+          <circle cx="268" cy="124" r="6" fill="#4fd1c5"/>
+          <circle cx="394" cy="94" r="7" fill="#8fe0d6"/>
+          <path d="M84 168h60v46h72v-24h60v44h96" fill="none" stroke="#2f7f8c" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round"/>
+          <circle cx="372" cy="234" r="6" fill="#12a89a"/>
+          <g font-family="monospace" font-size="13" fill="#9dc9c4">
+            <text x="40" y="70">jxx.cc / DNS</text>
+            <text x="228" y="100">CNAME → edge</text>
+            <text x="330" y="66">TLS 2027-02</text>
+            <text x="56" y="250">镜像 A</text>
+            <text x="196" y="278">镜像 B</text>
+            <text x="320" y="290">索引频道 ×12</text>
+          </g>
+          <g stroke="#3f8a95" stroke-width="1.4">
+            <rect x="40" y="262" width="104" height="34" rx="8" fill="rgba(18,168,154,.14)"/>
+            <rect x="180" y="290" width="104" height="26" rx="8" fill="rgba(18,168,154,.1)"/>
+            <rect x="312" y="302" width="118" height="16" rx="6" fill="rgba(18,168,154,.08)"/>
+          </g>
+          <g fill="#eaf6f4" font-family="sans-serif" font-size="12">
+            <text x="52" y="284">status 200</text>
+            <text x="192" y="308">status 301</text>
+          </g>
+        </svg>
+        <figcaption id="artCap">构图说明：实线为当前有效路径，虚线为 10 月下旬已归档的旧跳转。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+
+    <div class="content-col">
+
+      <!-- 领域概览 -->
+      <section id="overview" class="block" aria-labelledby="overviewTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="overviewTitle"><span>OVERVIEW</span>领域概览：这个站点的入口由什么构成</h2>
+        </div>
+        <div class="overview">
+          <div class="overview-main">
+            <h3>三类入口并存，路径互不完全信任</h3>
+            <p>jxx.cc 的使用者通常面对三层地址：主域 <b>jxx.cc</b>、按地区分流的镜像前缀（如 <b>e1</b>、<b>e2</b> 子域），以及频道级的短路径。10 月 10 日之后，主域只做 301 转跳到与地区最近的镜像，不再直接承载内容页。</p>
+            <p>10 月 24 日的检查中，<b>e1.jxx.cc</b> 返回 200 且证书签发者为 Let's Encrypt R11；<b>e2.jxx.cc</b> 在同一时刻返回 301，指回主域，形成闭环。这种状态在 11 月 6 日被修复，e2 改为独立证书。</p>
+            <p>频道结构从 9 月的 9 个扩到 12 个，新增「短剧分集速查」「番剧放送表」「老资源补档」三项。每个频道地址在索引页有独立编号，如 <b>C-07</b>、<b>C-11</b>，编号比名称更稳定。</p>
+          </div>
+          <div class="overview-side">
+            <div class="legend">
+              <div><b>12</b><small>可检索频道</small></div>
+              <div><b>3</b><small>有效镜像前缀</small></div>
+              <div><b>2016</b><small>档案最早年份</small></div>
+              <div><b>11-08</b><small>数据核对日</small></div>
+            </div>
+            <div class="card" style="padding:var(--sp-2) var(--sp-3)">
+              <ul class="status-row">
+                <li><span class="dot"></span>主域 jxx.cc 301 正常</li>
+                <li><span class="dot"></span>e1 镜像 200，证书有效</li>
+                <li><span class="dot warn"></span>e3 镜像仅夜间开放</li>
+                <li><span class="dot off"></span>旧 cdn 前缀 11-01 停用</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选推荐 -->
+      <section id="picks" class="block" aria-labelledby="picksTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="picksTitle"><span>PICKS</span>精选内容推荐：本周值得先看的 6 条</h2>
+        </div>
+        <p class="sec-desc">按「信息量 / 可核对程度」筛出，每条都标了来源与核查日期，不按热度排序。</p>
+        <div class="grid-cards">
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-dns-01/640/360" width="640" height="360" loading="lazy" alt="域名解析记录列表截图，含 A 记录与 TTL 字段">
+            <div class="gcard-body">
+              <span class="tag">入口核查</span>
+              <h3>jxx.cc 域名解析记录对照表</h3>
+              <p>10-10 与 11-06 两版 A 记录并列，TTL 由 600 改到 300，切流窗口缩短一半。</p>
+              <div class="meta"><span>来源：DNS 查询留存</span><span>11-06</span></div>
+            </div>
+          </article>
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-mirror-02/640/360" width="640" height="360" loading="lazy" alt="浏览器开发者工具中的响应状态码与证书信息面板">
+            <div class="gcard-body">
+              <span class="tag">镜像</span>
+              <h3>e1 镜像为什么比 e2 快 180 毫秒</h3>
+              <p>同城机房差异加上证书链长度，实测 11-05 晚 21:00 的 20 次采样。</p>
+              <div class="meta"><span>来源：自建测速脚本</span><span>11-05</span></div>
+            </div>
+          </article>
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-channel-03/640/360" width="640" height="360" loading="lazy" alt="频道索引页面，左侧为编号列，右侧为频道名">
+            <div class="gcard-body">
+              <span class="tag">频道</span>
+              <h3>短剧分集速查频道上线说明</h3>
+              <p>新增 C-10 频道，按剧名拼音首字母归档，单剧最多列 120 集。</p>
+              <div class="meta"><span>来源：频道索引页</span><span>11-03</span></div>
+            </div>
+          </article>
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-archive-04/640/360" width="640" height="360" loading="lazy" alt="老资源补档清单表格，含年份和补档状态列">
+            <div class="gcard-body">
+              <span class="tag">补档</span>
+              <h3>2018—2020 老资源补档进度</h3>
+              <p>已完成 63%，剩余条目集中在 2019 年夏季档，缺源名单 41 条。</p>
+              <div class="meta"><span>来源：补档频道台账</span><span>11-02</span></div>
+            </div>
+          </article>
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-faq-05/640/360" width="640" height="360" loading="lazy" alt="问答页面截图，问题以加粗显示，答案展开状态">
+            <div class="gcard-body">
+              <span class="tag">答疑</span>
+              <h3>镜像打不开时先查这 4 项</h3>
+              <p>DNS 缓存、证书时间、系统时间偏差、ISP 劫持，按顺序排除，附判断标准。</p>
+              <div class="meta"><span>来源：用户反馈汇总</span><span>11-04</span></div>
+            </div>
+          </article>
+          <article class="gcard">
+            <img src="https://picsum.photos/seed/jxxcc-timeline-06/640/360" width="640" height="360" loading="lazy" alt="时间线图示，节点标注十月到十一月的时间点">
+            <div class="gcard-body">
+              <span class="tag">变更史</span>
+              <h3>十次入口变更的时间线复盘</h3>
+              <p>从 10-10 到 11-06，六次切换里有三次属于证书续期连带操作。</p>
+              <div class="meta"><span>来源：状态页归档</span><span>11-06</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section id="latest" class="block" aria-labelledby="latestTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="latestTitle"><span>LATEST</span>最新更新：11 月 8 日前的可核对条目</h2>
+        </div>
+        <ul class="list-news">
+          <li>
+            <time datetime="2026-11-08">11-08</time>
+            <div><strong>索引页补上频道编号跳转锚点</strong><span class="sum">C-01 至 C-12 每个编号都有独立锚点，页内跳转不再回到页首。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-06">11-06</time>
+            <div><strong>主域证书续期，e2 镜像脱离闭环</strong><span class="sum">e2 在 10-24 曾 301 指回主域，本次改为独立 200 响应，证书签发者与 e1 一致。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-04">11-04</time>
+            <div><strong>查找框支持频道编号检索</strong><span class="sum">输入 C-07 这类编号会直接定位到对应频道卡片，不区分大小写。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-02">11-02</time>
+            <div><strong>老资源补档频道更新台账至 11-02</strong><span class="sum">缺源名单从 57 条降到 41 条，补档条目新增 16 条，集中在 2019 年 7 月档。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-10-29">10-29</time>
+            <div><strong>停用旧 cdn 前缀</strong><span class="sum">响应码由 200 改为 410，缓存节点保留至 11-15 后下线。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-10-24">10-24</time>
+            <div><strong>问题通报：e2 镜像出现 301 闭环</strong><span class="sum">用户反映连续跳转，状态页记录持续 2 小时 14 分，已在 11-06 修复。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-10-18">10-18</time>
+            <div><strong>番剧放送表频道新增当季追踪</strong><span class="sum">按周一至周日分列，单日最多 9 部，附放送时间与字幕组标注。</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section id="channels" class="block" aria-labelledby="channelsTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="channelsTitle"><span>CHANNELS</span>分类入口：12 个频道与对应编号</h2>
+        </div>
+        <p class="sec-desc">编号比名称更稳定，改版时编号不变；名称右侧是当前收录条目数。</p>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#channels"><b>C-01 短剧完结索引</b><small>284 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-02 番剧放送表</b><small>96 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-03 老资源补档</b><small>41 条待补</small></a>
+          <a class="cat-item" href="/#channels"><b>C-04 字幕组对照</b><small>73 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-05 剧场版片单</b><small>158 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-06 声优作品录</b><small>212 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-07 分集速查</b><small>117 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-08 评分异动榜</b><small>周更</small></a>
+          <a class="cat-item" href="/#channels"><b>C-09 制作名单库</b><small>340 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-10 短剧分集速查</b><small>120 集上限</small></a>
+          <a class="cat-item" href="/#channels"><b>C-11 版本差异对照</b><small>58 条</small></a>
+          <a class="cat-item" href="/#channels"><b>C-12 站内问答归档</b><small>466 条</small></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section id="deep" class="block" aria-labelledby="deepTitle" style="margin-bottom:var(--sp-4)">
+        <div class="article">
+          <h2 id="deepTitle">深度解析：镜像地址的「最新」往往不是最快的那个</h2>
+          <p class="byline">记录时间 2026-11-08 · 依据 10-10 至 11-06 共 6 次入口调整 · 采样点 3 个城市</p>
+
+          <h3>一、判断一：主域 301 之后，用户实测速度由镜像决定，与主域无关</h3>
+          <p>10 月 10 日起，访问 jxx.cc 会先收到 301，浏览器再向镜像发第二次请求。这意味着主域本身只承担一次解析和一次重定向，耗时稳定在 40—70 毫秒。11-05 晚 21:00 的 20 次采样里，主域耗时中位数 52 毫秒，波动仅 9 毫秒；真正拉开差距的是镜像响应：e1 中位数 186 毫秒，e2 为 366 毫秒。</p>
+          <p>因此「主域变慢了」的反馈多半是错觉。用户感知到的等待，是两次请求叠加后的结果，而第二次请求的落点由地区判定逻辑决定，与主域自身性能无关。</p>
+          <table class="datatable">
+            <caption>表 1：11-05 21:00—21:20 采样，每节点 20 次取中位数</caption>
+            <thead><tr><th>节点</th><th>状态码</th><th>响应中位数</th><th>证书签发者</th></tr></thead>
+            <tbody>
+              <tr><td>jxx.cc（主域）</td><td>301</td><td>52 ms</td><td>Let's Encrypt R11</td></tr>
+              <tr><td>e1.jxx.cc</td><td>200</td><td>186 ms</td><td>Let's Encrypt R11</td></tr>
+              <tr><td>e2.jxx.cc</td><td>200（10-24 曾为 301）</td><td>366 ms</td><td>Let's Encrypt R11</td></tr>
+              <tr><td>e3.jxx.cc</td><td>200（仅 22:00—06:00）</td><td>241 ms</td><td>ZeroSSL RSA</td></tr>
+            </tbody>
+          </table>
+
+          <h3>二、判断二：10-24 的 e2 闭环是配置残留，不是攻击</h3>
+          <p>10 月 24 日 19:40 起，部分用户访问 e2 镜像收到 301，跳回主域，主域再跳回 e2，形成循环。状态页记录持续 2 小时 14 分。当天 22:10 有人贴出截图，称「被劫持」。11-06 修复后可以看到，e2 的 Server 段仍保留旧的反向代理配置，其中一条 rewrite 规则未随之删除，把根路径指向了主域。</p>
+          <p>把这件事归为「被劫持」缺少证据：整个过程中证书签发者未变，响应头没有出现异常 IP 段，跳转目标也是本站自有域名。更接近的说法是升级时的配置残留。这里有争议的地方在于修复跨度——10-24 通报，11-06 才彻底修正，中间两周 e2 时好时坏，用户很难分辨是本地网络问题还是站点问题。</p>
+          <blockquote><p>「10 月 24 日那个 301，我换了三个浏览器都一样，最后是清掉 DNS 缓存才恢复。」——来自 11-02 的一条用户反馈，指向具体日期与操作，比笼统的「打不开」更有参考价值。</p></blockquote>
+
+          <h3>三、判断三：短剧分集速查的双频道并存，长期看会合并</h3>
+          <p>C-07「分集速查」和 C-10「短剧分集速查」在 11 月 3 日后同时存在。C-07 收录 117 条，覆盖日剧与国创；C-10 只收短剧，单剧上限 120 集。名称高度接近，入口页并列展示，用户常点错。从编号策略看，C-10 是新增频道，理论上不应与 C-07 语义重叠到这种程度。</p>
+          <p>可核对的线索有两条：11-03 的频道上线说明写「独立归档短剧」，没有提合并；11-06 的索引页里 C-07 的描述被减去「短剧」二字。描述改动通常先于结构合并一至两周发生。据此推测，12 月内 C-10 会并入 C-07 或反向吸收，编号可能保留其中一个。这条判断可被反驳：若短剧条目增速超过每周 40 条，独立频道反而更合理。</p>
+
+          <h3>四、把判断拆成可核对项</h3>
+          <p>下面四项不需要相信任何结论，按顺序自己看一遍即可得出结论：</p>
+          <ul class="checklist">
+            <li>访问主域，打开开发者工具的 Network，确认第一条请求是 301，Location 指向带地区前缀的域名。</li>
+            <li>对比 e1 与 e2 的证书详情，签发者、有效期起止时间是否一致；不一致就先怀疑证书链。</li>
+            <li>查频道索引页 C-07 与 C-10 的条目数，连续三天记录，看增速是否出现一边倒。</li>
+            <li>查状态页 10-24 那条通报的起止时间，与本地出现异常的时间比对，误差超过 30 分钟说明不是同一事件。</li>
+          </ul>
+          <div class="verdict"><b>结论边界：</b>上述判断基于 11-08 前可查的状态页、响应头与页面描述变化；若 11 月中旬频道结构再次调整，第三条判断需要重估，前两条与入口速度、证书状态相关的结论不受影响。</div>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section id="guide" class="block" aria-labelledby="guideTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="guideTitle"><span>GUIDE</span>体验指南：从打开到定位频道的 6 步</h2>
+        </div>
+        <ol class="steps">
+          <li><b>先访问主域，不要直接存镜像</b><p>镜像前缀会随地区调整，主域 jxx.cc 的 301 指向当前可用节点，长期收藏主域更稳。</p></li>
+          <li><b>看地址栏前缀判断落点</b><p>落在 e1 或 e2 属正常；落在 e3 时注意开放时段为 22:00 至次日 06:00。</p></li>
+          <li><b>用编号定位频道</b><p>在查找框输入 C-07 或 C-10，比输入中文频道名更快，且不区分大小写。</p></li>
+          <li><b>核对页面上的日期</b><p>补档台账、放送表页首都有「更新至」日期，11-02 之后未更新的条目先当作旧数据。</p></li>
+          <li><b>遇到跳转循环，清缓存再试</b><p>10-24 那类 301 闭环可用清除 DNS 缓存复现判断，若清除后仍循环，记录时间反馈。</p></li>
+          <li><b>把状态页加入书签</b><p>入口变更通常先在状态页留记录，比在论坛问「是不是挂了」更快得到答案。</p></li>
+        </ol>
+      </section>
+
+      <!-- 对照面板 -->
+      <section id="compare" class="block" aria-labelledby="compareTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="compareTitle"><span>COMPARE</span>对照面板：直接访问镜像与走主域跳转</h2>
+        </div>
+        <div class="compare">
+          <div class="panel-ok">
+            <h3>走主域 jxx.cc</h3>
+            <ul>
+              <li>多一次 301，约多 50 毫秒</li>
+              <li>自动落到当前最近镜像</li>
+              <li>证书随主域统一续期</li>
+              <li>适合长期收藏与分享</li>
+            </ul>
+          </div>
+          <div class="panel-caution">
+            <h3>直接访问镜像前缀</h3>
+            <ul>
+              <li>少一次跳转，首屏略快</li>
+              <li>地区判定固定，换网络可能变慢</li>
+              <li>e3 仅夜间开放，白天 404</li>
+              <li>适合已确认本地落点的老用户</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="block" aria-labelledby="faqTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="faqTitle"><span>FAQ</span>常见问题：入口、镜像与频道编号</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>jxx.cc最新域名解析在哪里能看到变更时间？</summary>
+            <div class="ans">状态页按日期列出每次调整，11-06 那条写明证书续期与 e2 修复同时完成。DNS 记录本身只能在查询工具里看当前值，历史值需要靠状态页留档，10-10 与 11-06 两版 A 记录都在归档页并列。</div>
+          </details>
+          <details>
+            <summary>镜像 e2 打不开，是站点挂了吗？</summary>
+            <div class="ans">先看主域是否仍能 301。若主域正常而 e2 异常，多为 e2 单点问题。10-24 那次是配置残留导致的 301 闭环，持续 2 小时 14 分；11-06 之后 e2 已改独立配置。判断方法：清 DNS 缓存后再访问，若仍循环，记录时间发给状态页反馈入口。</div>
+          </details>
+          <details>
+            <summary>短剧分集速查（C-10）和分集速查（C-07）有什么区别？</summary>
+            <div class="ans">C-07 覆盖日剧与国创共 117 条，C-10 只收短剧，单剧上限 120 集。两者在 11-03 后并列，名称接近容易点错。若只想找短剧，用 C-10；若要跨类型查分集，C-07 更全。</div>
+          </details>
+          <details>
+            <summary>老资源补档的进度按什么统计？</summary>
+            <div class="ans">按年份与季度分组的缺源条目为基数。11-02 台账显示已完成 63%，剩余 41 条缺源集中在 2019 年夏季档。每条附补档状态、最近核对日期与缺失原因，未标日期的条目不在统计内。</div>
+          </details>
+          <details>
+            <summary>为什么页面上显示的日期和论坛说的不一样？</summary>
+            <div class="ans">页内日期以台账或状态页的核对日为准，论坛多为转述。10-24 事件中，论坛帖提到 19:40 出现异常，状态页记录 19:40 开始、22:10 通报，两者一致；但修复日以 11-06 为准，论坛里「当天就修好了」的说法与记录不符。</div>
+          </details>
+          <details>
+            <summary>查找框能搜中文频道名吗？</summary>
+            <div class="ans">可以，也能搜 C-xx 编号。输入后会在当前页高亮可匹配的频道卡片，无匹配时给出提示，不会跳转到站外。编号检索不区分大小写，输入 c-07 与 C-07 结果相同。</div>
+          </details>
+          <details>
+            <summary>晚上访问比白天快，是错觉吗？</summary>
+            <div class="ans">部分是真的。e3 镜像只在 22:00 至次日 06:00 开放，夜间多一个可用节点，分流压力小。11-05 采样中 e3 中位数 241 毫秒，介于 e1 与 e2 之间。白天只有 e1、e2 两个落点，e2 慢的时候体感更明显。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section id="comments" class="block" aria-labelledby="commentsTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="commentsTitle"><span>COMMENTS</span>用户评论：来自具体条目的反馈</h2>
+        </div>
+        <div class="comments">
+          <article class="comment">
+            <header><span class="avatar">林</span><span>林间小路 · 11-06</span></header>
+            <p>表 1 那个 e1 和 e2 的差值我复现了，但我是用手机流量，差 210 毫秒左右，比文中 180 还大一点。可能跟我这运营商走的路由有关。</p>
+            <span class="ref">指向：表 1 采样</span>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">阿</span><span>阿岑 · 11-05</span></header>
+            <p>C-10 上线那天我找了半天没找到入口，后来才发现它跟 C-07 挨着，名字又像。频道名能不能改得差别大一点。</p>
+            <span class="ref">指向：C-10 频道</span>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">周</span><span>周末补剧 · 11-03</span></header>
+            <p>补档台账从 57 降到 41 是真的，但我等的那部 2019 年 7 月档还没补上，缺源原因写的是「原始片源缺失」，这个来源不好找。</p>
+            <span class="ref">指向：补档台账 11-02</span>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">十</span><span>十点半 · 11-02</span></header>
+            <p>10 月 24 日晚上我也遇到了连续跳转，当时以为是自己路由器问题，重启了两次。事后看状态页才知道是 e2 的配置残留，建议这种问题直接在首页提示。</p>
+            <span class="ref">指向：10-24 事件</span>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">K</span><span>Kite · 11-01</span></header>
+            <p>深度解析里说主域变慢是错觉，我同意一半。测下来主域确实稳定，但我这里 e2 比 e1 慢 400 多毫秒，体验上就是慢，管它是不是主域的问题。</p>
+            <span class="ref">指向：判断一</span>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">麦</span><span>麦子 · 10-30</span></header>
+            <p>番剧放送表按星期分列挺好用，就是字幕组标注有时候空着。我看 10-18 更新之后有两天没补标注。</p>
+            <span class="ref">指向：C-02 放送表</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section id="news" class="block" aria-labelledby="newsTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="newsTitle"><span>NEWS</span>相关资讯：索引与镜像周边</h2>
+        </div>
+        <div class="news-two">
+          <article class="news-card">
+            <time datetime="2026-11-07">2026-11-07</time>
+            <h3>浏览器证书透明度日志对镜像排查的用处</h3>
+            <p>把 e1、e2 的证书序列号放进 CT 日志查询，能看到签发时间差 3 天。10-24 闭环期间证书没换，这条记录可以排除「证书被替换」的猜测。</p>
+          </article>
+          <article class="news-card">
+            <time datetime="2026-11-04">2026-11-04</time>
+            <h3>频道编号为什么比名称更适合做书签</h3>
+            <p>C-07 从 9 月至今改过两次描述，编号未变。以编号为锚点的书签在改版后仍然有效，而以名称为路径的链接在 11-03 后出现过 404。</p>
+          </article>
+          <article class="news-card">
+            <time datetime="2026-10-30">2026-10-30</time>
+            <h3>用 TTL 缩短判断入口切换是否完成</h3>
+            <p>TTL 由 600 改到 300 后，切流窗口从 10 分钟缩到 5 分钟。11-06 的切换在 5 分钟内基本全量生效，比 10-10 那次快一倍。</p>
+          </article>
+          <article class="news-card">
+            <time datetime="2026-10-26">2026-10-26</time>
+            <h3>分集速查的数据结构：先剧名后集数</h3>
+            <p>C-07 按剧名拼音首字母归档，二级为集数区间。这种结构在条目过千后检索变慢，C-10 的单剧 120 集上限正是为此设置。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section id="related" class="block" aria-labelledby="relatedTitle" style="margin-bottom:var(--sp-4)">
+        <div class="sec-head">
+          <h2 class="sec-title" id="relatedTitle"><span>RELATED</span>相关推荐：常用检索词</h2>
+        </div>
+        <div class="chip-row">
+          <a class="chip" href="/#latest">jxx.cc 域名解析变更</a>
+          <a class="chip" href="/#deep">镜像 e1 e2 速度对比</a>
+          <a class="chip" href="/#channels">短剧分集速查频道</a>
+          <a class="chip" href="/#channels">番剧放送表当季追踪</a>
+          <a class="chip" href="/#latest">老资源补档进度</a>
+          <a class="chip" href="/#guide">主域 301 跳转排查</a>
+          <a class="chip" href="/#faq">证书续期时间</a>
+          <a class="chip" href="/#compare">直连镜像与走主域</a>
+          <a class="chip" href="/#channels">C-07 C-10 区别</a>
+          <a class="chip" href="/#comments">10-24 跳转循环</a>
+        </div>
+      </section>
+
+      <!-- 补充板块：时间线 -->
+      <section id="timeline" class="block" aria-labelledby="timelineTitle">
+        <div class="sec-head">
+          <h2 class="sec-title" id="timelineTitle"><span>TIMELINE</span>变更时间线：10 月 10 日至 11 月 8 日</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-11-06">2026-11-06</time>
+            <b>证书续期，e2 闭环修复</b>
+            <p>主域证书有效期延至 2027-02-04；e2 去掉残留 rewrite 规则，由 301 改为 200。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-03">2026-11-03</time>
+            <b>短剧分集速查 C-10 上线</b>
+            <p>单剧上限 120 集，按剧名拼音归档，与 C-07 并列展示。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-29">2026-10-29</time>
+            <b>旧 cdn 前缀停用</b>
+            <p>响应改为 410，缓存节点保留至 11-15，之后不再响应。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-24">2026-10-24</time>
+            <b>e2 镜像出现 301 闭环</b>
+            <p>19:40 起用户反映连续跳转，22:10 状态页通报，持续 2 小时 14 分。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-18">2026-10-18</time>
+            <b>番剧放送表新增当季追踪</b>
+            <p>按周一至周日分列，单日最多 9 部，附放送时间与字幕组标注。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-10">2026-10-10</time>
+            <b>主域改为只做 301 转跳</b>
+            <p>内容页不再由主域直接承载，TTL 同期由 600 改为 300。</p>
+          </li>
+        </ol>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="sidebar" aria-label="侧栏导航与辅助信息">
+      <div class="card">
+        <h2 class="panel-title">本页栏目</h2>
+        <nav class="side-nav" aria-label="页内导航">
+          <a href="/#overview">领域概览</a>
+          <a href="/#picks">精选内容推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#channels">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#compare">对照面板</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#related">相关推荐</a>
+          <a href="/#timeline">变更时间线</a>
+        </nav>
+      </div>
+      <div class="card">
+        <h2 class="panel-title">入口状态（11-08 核对）</h2>
+        <ul class="side-list">
+          <li><span>主域 jxx.cc</span><b>301</b></li>
+          <li><span>e1.jxx.cc</span><b>200</b></li>
+          <li><span>e2.jxx.cc</span><b>200</b></li>
+          <li><span>e3.jxx.cc</span><b>夜间</b></li>
+          <li><span>旧 cdn 前缀</span><b>410</b></li>
+        </ul>
+        <p class="side-note" style="margin-top:10px">状态码为当日抽样结果，非实时监控。遇到不一致时以状态页归档为准。</p>
+      </div>
+      <div class="card">
+        <h2 class="panel-title">频道快查</h2>
+        <div class="chip-row">
+          <a class="chip" href="/#channels">C-01</a>
+          <a class="chip" href="/#channels">C-02</a>
+          <a class="chip" href="/#channels">C-03</a>
+          <a class="chip" href="/#channels">C-04</a>
+          <a class="chip" href="/#channels">C-05</a>
+          <a class="chip" href="/#channels">C-06</a>
+          <a class="chip" href="/#channels">C-07</a>
+          <a class="chip" href="/#channels">C-08</a>
+          <a class="chip" href="/#channels">C-09</a>
+          <a class="chip" href="/#channels">C-10</a>
+          <a class="chip" href="/#channels">C-11</a>
+          <a class="chip" href="/#channels">C-12</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="panel-title">核查记录</h2>
+        <ul class="side-list">
+          <li><span>DNS 记录对照</span><b>10-10</b></li>
+          <li><span>e1 / e2 采样</span><b>11-05</b></li>
+          <li><span>C-10 上线</span><b>11-03</b></li>
+          <li><span>补档台账</span><b>11-02</b></li>
+          <li><span>证书续期</span><b>11-06</b></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer" aria-label="页脚">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="32" height="32" viewBox="0 0 64 64" role="img" aria-label="站点标志小图">
+            <rect width="64" height="64" rx="14" fill="#12384a"/>
+            <path d="M17 46V18h8v28z" fill="#4fd1c5"/>
+            <path d="M29 46V18h7.5L48 46V18h-6.5v16L31 18h-2z" fill="#8fe0d6" opacity=".9"/>
+          </svg>
+          <span class="brand-text" style="color:#fff">jxx.cc最新</span>
+        </div>
+        <p class="footer-note">记录域名解析、镜像切换与频道编号变化，条目以状态页和响应头为据，便于逐项核对。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用与查询</h4>
+        <ul>
+          <li><a href="/#channels">频道索引</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#compare">对照面板</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区与归档</h4>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#timeline">变更时间线</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>示例数据说明：频道条目数、采样耗时与台账进度均为演示用示例，依 2026-11-08 前可查记录整理。</span>
+      <span>页面更新 2026-11-08 · 对应正文「最新更新」与「入口状态」两项</span>
+    </div>
+    <div class="footer-bottom" style="border-top:0;padding-top:0">
+      <span>© 2026 jxx.cc观察记录 · 内容仅供核对参考</span>
+      <span>反馈与纠错请通过状态页入口提交</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  if(menuToggle && mainNav){
+    menuToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var targets = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          sideLinks.forEach(function(a){a.classList.remove('is-active');});
+          var idx = targets.indexOf(en.target);
+          if(idx > -1) sideLinks[idx].classList.add('is-active');
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px',threshold:0});
+    targets.forEach(function(t){ if(t) io.observe(t); });
+  }
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var feedbackText = document.getElementById('searchFeedbackText');
+
+  function clearHighlights(){
+    document.querySelectorAll('[data-search-hit]').forEach(function(el){
+      el.style.outline = '';
+      el.style.outlineOffset = '';
+      el.removeAttribute('data-search-hit');
+    });
+  }
+
+  function doSearch(){
+    var q = (input.value || '').trim();
+    clearHighlights();
+    if(!q){
+      feedback.classList.remove('show');
+      return;
+    }
+    var lower = q.toLowerCase();
+    var hits = [];
+    ['#overview','#picks','#latest','#channels','#deep','#guide','#faq','#comments','#news','#timeline'].forEach(function(sel){
+      var sec = document.querySelector(sel);
+      if(!sec) return;
+      var text = (sec.textContent || '').toLowerCase();
+      if(text.indexOf(lower) > -1){
+        sec.setAttribute('data-search-hit','1');
+        sec.style.outline = '2px solid #12a89a';
+        sec.style.outlineOffset = '4px';
+        hits.push(sec.querySelector('h2') ? sec.querySelector('h2').textContent : sel);
+      }
+    });
+    if(hits.length){
+      feedbackText.textContent = '找到 ' + hits.length + ' 个相关栏目：' + hits.join('、') + '。已用描边标出。';
+      feedback.classList.add('show');
+    } else {
+      feedbackText.textContent = '没有匹配「' + q + '」的栏目。可试试 C-07、e1、补档、证书等词。';
+      feedback.classList.add('show');
+    }
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch();
+    });
+    input.addEventListener('input', function(){
+      if(!input.value.trim()){ clearHighlights(); feedback.classList.remove('show'); }
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"jxx.cc最新",
+  "description":"jxx.cc 域名解析、镜像切换与频道索引的观察记录，附可核对的变更时间与状态码。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"jxx.cc最新域名解析在哪里能看到变更时间？","acceptedAnswer":{"@type":"Answer","text":"状态页按日期列出每次调整，11-06 那条写明证书续期与 e2 修复同时完成。DNS 记录本身只能查当前值，历史值靠状态页留档。"}},
+    {"@type":"Question","name":"镜像 e2 打不开，是站点挂了吗？","acceptedAnswer":{"@type":"Answer","text":"先看主域是否仍能 301。若主域正常而 e2 异常，多为 e2 单点问题。10-24 那次是配置残留导致的 301 闭环，持续 2 小时 14 分；11-06 之后 e2 已改独立配置。"}},
+    {"@type":"Question","name":"短剧分集速查（C-10）和分集速查（C-07）有什么区别？","acceptedAnswer":{"@type":"Answer","text":"C-07 覆盖日剧与国创共 117 条，C-10 只收短剧，单剧上限 120 集。两者在 11-03 后并列，名称接近容易点错。"}},
+    {"@type":"Question","name":"老资源补档的进度按什么统计？","acceptedAnswer":{"@type":"Answer","text":"按年份与季度分组的缺源条目为基数。11-02 台账显示已完成 63%，剩余 41 条缺源集中在 2019 年夏季档。"}},
+    {"@type":"Question","name":"为什么页面上显示的日期和论坛说的不一样？","acceptedAnswer":{"@type":"Answer","text":"页内日期以台账或状态页的核对日为准，论坛多为转述。10-24 事件修复日以 11-06 为准。"}},
+    {"@type":"Question","name":"查找框能搜中文频道名吗？","acceptedAnswer":{"@type":"Answer","text":"可以，也能搜 C-xx 编号。输入后会在当前页高亮匹配栏目，无匹配时给出提示，不会跳转到站外。"}},
+    {"@type":"Question","name":"晚上访问比白天快，是错觉吗？","acceptedAnswer":{"@type":"Answer","text":"部分是真的。e3 镜像只在 22:00 至次日 06:00 开放，夜间多一个可用节点，分流压力小。"}}
+  ]
+}
+</script>
+
+</body>
+            </html>
